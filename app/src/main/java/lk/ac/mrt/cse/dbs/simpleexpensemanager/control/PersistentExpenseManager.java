@@ -32,16 +32,6 @@ public class PersistentExpenseManager extends ExpenseManager {
 
         db.onCreate(database);
 
-//        database.execSQL("create table if not exists " +
-//                "account (accountno varchar primary key, bankname varchar, accountholdername varchar,balance real)");
-//
-//        database.execSQL("create table if not exists " +
-//                "account_transaction( transactionid integer primary key ," +
-//                "accountno varchar ," +
-//                "expensetype integer," +
-//                "amount real," +
-//                "date date," +
-//                "foreign key (accountno) references account(accountno)) ;");
 
         PersistentAccountDAO persistentAccountDAO = new PersistentAccountDAO(database);
         PersistentTransactionDAO persistentTransactionDAO = new PersistentTransactionDAO(database);
